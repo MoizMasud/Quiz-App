@@ -1,0 +1,85 @@
+*, *::before, *::after {
+    box-sizing: border-box;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+:root {
+    --neutral: rgb(91, 108, 204);
+    --wrong: rgb(218, 40, 40);
+    --correct: rgb(78, 143, 78);
+}
+
+body {
+    --color: var(--neutral); 
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100vw;
+    background-color: var(--color);
+}
+
+body.correct {
+    --color: var(--correct);
+}
+body.wrong {
+    --color: var(--wrong);
+}
+
+.card-container {
+    width: 200px;
+    max-width: 80%;
+    padding: 10px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 0 10px 2px;
+}
+
+.btn-grid {
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    gap: 10px;
+    margin: 20px 0;
+}
+
+.btn {
+    --color: var(--neutral);
+    background-color: var(--color);
+    border: 1px solid lightgray;
+    border-radius: 5px;
+    padding: 5px 10px;
+    color: white;
+    outline: none;
+    cursor: pointer;
+}
+
+.btn:hover {
+    border-color: black;
+}
+
+.btn.correct {
+    --color: var(--correct);
+    color: black;
+}
+
+.btn.wrong {
+    --color: var(--wrong);
+}
+
+.start-btn .next-btn {
+    font-size: 1.5rem;
+    font-weight: bold;
+    padding: 10px 20px;
+}
+.controls {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hide {
+    display: none;
+}
+
